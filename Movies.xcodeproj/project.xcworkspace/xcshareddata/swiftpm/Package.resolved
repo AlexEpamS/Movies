@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "fetch",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dhardiman/Fetch",
+      "state" : {
+        "revision" : "024c788ded0297ceabc4eb7db329b26bc4eae121",
+        "version" : "4.4.0"
+      }
+    }
+  ],
+  "version" : 2
+}

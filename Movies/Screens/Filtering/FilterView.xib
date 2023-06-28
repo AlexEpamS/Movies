@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterViewController" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="filterStatusLabel" destination="5ek-iD-2oG" id="nf7-Dt-9kp"/>
+                <outlet property="maxPriceTextField" destination="hKR-nj-TJS" id="bAY-J5-dag"/>
+                <outlet property="minPriceTextField" destination="S18-6x-7Rx" id="NVH-lR-Z7X"/>
+                <outlet property="view" destination="iN0-l3-epB" id="RYv-68-16M"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrC-Ng-IgJ">
+                    <rect key="frame" x="16" y="59" width="76" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="S18-6x-7Rx">
+                    <rect key="frame" x="16" y="88" width="134" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="134" id="orX-ax-5vm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <action selector="textFieldDidChange:" destination="-1" eventType="editingChanged" id="3Ah-Y8-g5G"/>
+                        <outlet property="delegate" destination="-1" id="CYa-Sz-lwO"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="hKR-nj-TJS">
+                    <rect key="frame" x="16" y="190" width="134" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="134" id="WXO-f8-auT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <action selector="textFieldDidChange:" destination="-1" eventType="editingChanged" id="mVG-uF-hKR"/>
+                        <outlet property="delegate" destination="-1" id="GVu-l9-c97"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNH-lF-hIf">
+                    <rect key="frame" x="16" y="161" width="75" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ek-iD-2oG">
+                    <rect key="frame" x="16" y="344" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4h-Vj-bNc">
+                    <rect key="frame" x="143" y="262" width="107" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Clear Filter"/>
+                    <connections>
+                        <action selector="clearFilterButtonAction:" destination="-1" eventType="touchUpInside" id="Zqs-P8-uUH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hKR-nj-TJS" firstAttribute="top" secondItem="oNH-lF-hIf" secondAttribute="bottom" constant="8" symbolic="YES" id="0ep-sf-eyU"/>
+                <constraint firstItem="e4h-Vj-bNc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4fl-gk-ndz"/>
+                <constraint firstItem="5ek-iD-2oG" firstAttribute="top" secondItem="e4h-Vj-bNc" secondAttribute="bottom" constant="47" id="5Pq-Kb-Q2D"/>
+                <constraint firstItem="hrC-Ng-IgJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Px9-Nz-Cet"/>
+                <constraint firstItem="S18-6x-7Rx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Yur-yE-jfe"/>
+                <constraint firstItem="oNH-lF-hIf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="hJ7-iV-dE9"/>
+                <constraint firstItem="hrC-Ng-IgJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="n85-cw-kjf"/>
+                <constraint firstItem="S18-6x-7Rx" firstAttribute="top" secondItem="hrC-Ng-IgJ" secondAttribute="bottom" constant="8" symbolic="YES" id="nsN-O5-7xp"/>
+                <constraint firstItem="hKR-nj-TJS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="pRZ-Bg-akf"/>
+                <constraint firstItem="oNH-lF-hIf" firstAttribute="top" secondItem="S18-6x-7Rx" secondAttribute="bottom" constant="39" id="qyI-l9-b3M"/>
+                <constraint firstItem="5ek-iD-2oG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="tUT-ab-FCt"/>
+                <constraint firstItem="e4h-Vj-bNc" firstAttribute="top" secondItem="hKR-nj-TJS" secondAttribute="bottom" constant="38" id="xYw-Xr-uaK"/>
+            </constraints>
+            <point key="canvasLocation" x="-16.030534351145036" y="-32.394366197183103"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
